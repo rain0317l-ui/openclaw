@@ -1,0 +1,26 @@
+name: 自动同步上游
+on:
+  schedule:
+    - cron: '0 0 * * *' # 每天北京时间上午 8 点自动执行
+  workflow_dispatch: # 允许你在网页上手动点击按钮触发同步
+
+jobs:
+  sync_latest_from_upstream:
+    name: Sync latest commits from upstream
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout target repo
+        uses: actions/checkout@v4
+
+      - name: Sync upstream changes
+        id: sync
+        uses: aormsby/Fork-Sync-Action@v3.4
+        with:
+          upstream_sync_repo: rain0317l-ui/cloud-mail  # 已为你自动填写上游仓库
+          upstream_sync_branch: main                 # ⚠️如果原作者使用的是 main，请将此处改为 main
+          target_sync_branch: main                   # ⚠️如果你的主分支叫 main，请将此处改为 main
+          target_repo_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Sync check
+        if: failure()
+        run: echo "同步失败，可能存在代码冲突，需要手动处理。"
