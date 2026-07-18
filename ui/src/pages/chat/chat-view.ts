@@ -8,6 +8,7 @@ import type {
   ControlUiSessionPullRequest,
 } from "../../../../src/gateway/control-ui-contract.js";
 import type { SessionsListResult } from "../../api/types.ts";
+import type { QuestionPrompt } from "../../app/question-prompt.ts";
 import type { ChatSendShortcut } from "../../app/settings.ts";
 import { icons } from "../../components/icons.ts";
 import { t } from "../../i18n/index.ts";
@@ -58,12 +59,7 @@ import type { RealtimeTalkConversationEntry } from "./realtime-talk-conversation
 import type { RealtimeTalkLevelSignal } from "./realtime-talk-level.ts";
 import type { RealtimeTalkStatus } from "./realtime-talk.ts";
 import type { ChatRunUiStatus } from "./run-lifecycle.ts";
-import type {
-  CompactionStatus,
-  FallbackStatus,
-  PlanStatus,
-  QuestionStatus,
-} from "./tool-stream.ts";
+import type { CompactionStatus, FallbackStatus, PlanStatus } from "./tool-stream.ts";
 import "../../components/resizable-divider.ts";
 
 function isFileDrag(dataTransfer: DataTransfer | null): boolean {
@@ -86,7 +82,10 @@ export type ChatProps = {
   compactionStatus?: CompactionStatus | null;
   fallbackStatus?: FallbackStatus | null;
   planStatus?: PlanStatus | null;
-  questionStatus?: QuestionStatus | null;
+  gatewayQuestionPrompts?: readonly QuestionPrompt[];
+  onGatewayQuestionChange?: () => void;
+  onGatewayQuestionSubmit?: (id: string, answers: Record<string, string[]>) => void | Promise<void>;
+  onGatewayQuestionSkip?: (id: string) => void | Promise<void>;
   messages: unknown[];
   historyPagination?: {
     loading: boolean;
@@ -107,9 +106,14 @@ export type ChatProps = {
   realtimeTalkInputLevel?: RealtimeTalkLevelSignal;
   realtimeTalkConversation?: RealtimeTalkConversationEntry[];
   realtimeTalkVideoStream?: MediaStream | null;
+  realtimeTalkVideoCapable?: boolean;
+  realtimeTalkVideoPending?: boolean;
+  realtimeTalkCameraError?: boolean;
   connected: boolean;
   canSend: boolean;
   disabledReason: string | null;
+  disabledActionLabel?: string | null;
+  onDisabledAction?: (() => void) | null;
   error: string | null;
   sessions: SessionsListResult | null;
   /** Host context resolving global-alias session keys (scope=global fleets). */
@@ -155,7 +159,7 @@ export type ChatProps = {
   onCompact?: () => void | Promise<void>;
   onOpenSessionCheckpoints?: () => void | Promise<void>;
   onToggleRealtimeTalk?: () => void;
-  onToggleRealtimeVideo?: () => void;
+  onToggleRealtimeCamera?: () => void;
   onDismissError?: () => void;
   onDismissRealtimeTalkError?: () => void;
   onAbort?: () => void;
@@ -163,11 +167,6 @@ export type ChatProps = {
   onQueueRetry?: (id: string) => void;
   onQueueSteer?: (id: string) => void;
   onGoalCommand?: (command: string) => void;
-  onQuestionSubmit?: (
-    actionToken: string,
-    answers: Record<string, string>,
-    onRejected: () => void,
-  ) => void;
   onHistoryIntent?: (event: Event) => void;
   /** Sends a detached /btw side question (selection popup or side-chat
    * follow-up). `displayQuestion` overrides the pending-turn display when the
@@ -200,6 +199,8 @@ export type ChatProps = {
   replyTarget?: { messageId: string; text: string; senderLabel?: string | null } | null;
   onClearReply?: () => void;
   onSetReply?: (target: { messageId: string; text: string; senderLabel?: string | null }) => void;
+  onRewindMessage?: (entryId: string) => Promise<boolean> | boolean;
+  onForkMessage?: (entryId: string) => Promise<void> | void;
   sessionWorkspace?: SessionWorkspaceProps;
   backgroundTasks?: BackgroundTasksProps;
   taskSuggestions?: TaskSuggestion[];
@@ -285,6 +286,7 @@ export function renderChat(props: ChatProps) {
       runActive: Boolean(props.canAbort),
       runWorking: isChatRunWorking(props),
       planStatus: props.planStatus,
+      questionPrompts: props.gatewayQuestionPrompts,
       sessions: props.sessions,
       sessionHost: props.sessionHost,
       assistantName: props.assistantName,
@@ -312,6 +314,8 @@ export function renderChat(props: ChatProps) {
       getDraft: props.getDraft,
       onSend: props.onSend,
       onSetReply: props.onSetReply,
+      onRewindMessage: props.onRewindMessage,
+      onForkMessage: props.onForkMessage,
       // Archived/non-composable sessions must not offer selection actions:
       // withholding the callback keeps the popup from rendering at all.
       onSideQuestion: props.canSend ? props.onSideQuestion : undefined,
@@ -332,13 +336,15 @@ export function renderChat(props: ChatProps) {
     connected: props.connected,
     canSend: props.canSend,
     disabledReason: props.disabledReason,
+    disabledActionLabel: props.disabledActionLabel,
+    onDisabledAction: props.onDisabledAction,
     sending: props.sending,
     canAbort: props.canAbort,
     runStatus: props.runStatus,
     compactionStatus: props.compactionStatus,
     fallbackStatus: props.fallbackStatus,
     planStatus: props.planStatus,
-    questionStatus: props.questionStatus,
+    gatewayQuestionPrompts: props.gatewayQuestionPrompts,
     messages: props.messages,
     stream: props.stream,
     queue: props.queue,
@@ -357,6 +363,9 @@ export function renderChat(props: ChatProps) {
     realtimeTalkInputLevel: props.realtimeTalkInputLevel,
     realtimeTalkConversation: props.realtimeTalkConversation,
     realtimeTalkVideoStream: props.realtimeTalkVideoStream,
+    realtimeTalkVideoCapable: props.realtimeTalkVideoCapable,
+    realtimeTalkVideoPending: props.realtimeTalkVideoPending,
+    realtimeTalkCameraError: props.realtimeTalkCameraError,
     composerControls: props.composerControls,
     getDraft: props.getDraft,
     onDraftChange: props.onDraftChange,
@@ -366,14 +375,16 @@ export function renderChat(props: ChatProps) {
     onSend: props.onSend,
     onCompact: props.onCompact,
     onToggleRealtimeTalk: props.onToggleRealtimeTalk,
-    onToggleRealtimeVideo: props.onToggleRealtimeVideo,
+    onToggleRealtimeCamera: props.onToggleRealtimeCamera,
     onDismissRealtimeTalkError: props.onDismissRealtimeTalkError,
     onAbort: props.onAbort,
     onQueueRemove: props.onQueueRemove,
     onQueueRetry: props.onQueueRetry,
     onQueueSteer: props.onQueueSteer,
     onGoalCommand: props.onGoalCommand,
-    onQuestionSubmit: props.onQuestionSubmit,
+    onGatewayQuestionChange: props.onGatewayQuestionChange,
+    onGatewayQuestionSubmit: props.onGatewayQuestionSubmit,
+    onGatewayQuestionSkip: props.onGatewayQuestionSkip,
     onNewSession: props.onNewSession,
     onClearReply: props.onClearReply,
     onAttachmentsChange: props.onAttachmentsChange,
@@ -440,7 +451,6 @@ export function renderChat(props: ChatProps) {
         }
       }}
     >
-      ${props.disabledReason ? html`<div class="callout">${props.disabledReason}</div>` : nothing}
       ${props.error
         ? html`
             <div class="callout danger callout--dismissible" role="alert">

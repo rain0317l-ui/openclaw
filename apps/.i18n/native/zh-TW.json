@@ -7344,6 +7344,56 @@
       "translated": "不支援的附件"
     },
     {
+      "id": "native.android.bf40f9f9a508155d",
+      "source": "Other answer",
+      "translated": "其他答案"
+    },
+    {
+      "id": "native.android.fa81739f52e7697f",
+      "source": "Submit",
+      "translated": "提交"
+    },
+    {
+      "id": "native.android.f68cd7a84be4089e",
+      "source": "Answered",
+      "translated": "已回答"
+    },
+    {
+      "id": "native.android.a0dc883947c2f980",
+      "source": "Answered elsewhere",
+      "translated": "已在其他地方回答"
+    },
+    {
+      "id": "native.android.1a0e6b33059a63aa",
+      "source": "Expired",
+      "translated": "已過期"
+    },
+    {
+      "id": "native.android.d6d8fc83cec68418",
+      "source": "Cancelled",
+      "translated": "已取消"
+    },
+    {
+      "id": "native.android.73f64d0d54b7f9c0",
+      "source": "Pending",
+      "translated": "待處理"
+    },
+    {
+      "id": "native.android.92dfa7979d04989c",
+      "source": "Submitting…",
+      "translated": "正在提交…"
+    },
+    {
+      "id": "native.android.c5e9ee99f9d9c612",
+      "source": "Expires in ${seconds / 60}m ${seconds % 60}s",
+      "translated": "將於 ${seconds / 60}m ${seconds % 60}s 後過期"
+    },
+    {
+      "id": "native.android.2ca602fbdf96f1e7",
+      "source": "Expires in ${seconds}s",
+      "translated": "將於 ${seconds}s 後過期"
+    },
+    {
       "id": "native.android.118e8d239b18895e",
       "source": "Model",
       "translated": "模型"
@@ -10439,6 +10489,11 @@
       "translated": "在 Worktree 中新增聊天"
     },
     {
+      "id": "native.apple.a1b0d289758e2213",
+      "source": "Sessions…",
+      "translated": "工作階段…"
+    },
+    {
       "id": "native.apple.17c13312e7532c89",
       "source": "Background Tasks",
       "translated": "背景任務"
@@ -10447,6 +10502,11 @@
       "id": "native.apple.ced228bb4d20a726",
       "source": "Export Transcript",
       "translated": "匯出逐字稿"
+    },
+    {
+      "id": "native.apple.f26cef22f417abb4",
+      "source": "Show reasoning & tool activity",
+      "translated": "顯示推理與工具活動"
     },
     {
       "id": "native.apple.940e1f943750c94b",
@@ -13109,6 +13169,11 @@
       "translated": "執行分享自我測試"
     },
     {
+      "id": "native.apple.c2cab769e36ad25d",
+      "source": "Apple Health",
+      "translated": "Apple 健康"
+    },
+    {
       "id": "native.apple.dfbbe0f7c038894a",
       "source": "Discovery Debug Logs",
       "translated": "探索偵錯記錄"
@@ -14299,6 +14364,36 @@
       "translated": "不要再顯示"
     },
     {
+      "id": "native.apple.e80408b30ca670f4",
+      "source": "Apple Health Summaries",
+      "translated": "Apple 健康摘要"
+    },
+    {
+      "id": "native.apple.1d9253b4d79e1a6b",
+      "source": "Apple Health data is unavailable on this device.",
+      "translated": "此裝置無法使用 Apple 健康資料。"
+    },
+    {
+      "id": "native.apple.f332b4fb6215a12a",
+      "source": "Reads steps, sleep, resting heart rate, and workouts from Apple Health only when a summary is requested. Only the aggregate leaves this device through your Gateway to your configured AI provider; raw samples stay on this device and results may remain in chat history.",
+      "translated": "僅在要求摘要時，才會從 Apple Health 讀取步數、睡眠、靜止心率與體能訓練資料。只有彙總資料會透過您的 Gateway 離開此裝置並傳送至您設定的 AI 供應商；原始樣本會保留在此裝置上，而結果可能會保留在聊天記錄中。"
+    },
+    {
+      "id": "native.apple.279758eb7531d811",
+      "source": "Creates read-only summaries from the Apple Health app for steps, sleep, resting heart rate, and workouts. Only requested summaries leave this device through your Gateway to your configured AI provider; raw samples stay on this device.",
+      "translated": "根據 Apple 健康 App 中的步數、睡眠、靜止心率和體能訓練建立唯讀摘要。只有您要求的摘要會透過您的 Gateway 離開此裝置並傳送至您設定的 AI 供應商；原始樣本會保留在此裝置上。"
+    },
+    {
+      "id": "native.apple.9e29919ede21527e",
+      "source": "Turn Off Summaries",
+      "translated": "關閉摘要"
+    },
+    {
+      "id": "native.apple.c229e9c6fa7bac3b",
+      "source": "Enable Apple Health Summaries",
+      "translated": "啟用 Apple 健康摘要"
+    },
+    {
       "id": "native.apple.cf820096080f7031",
       "source": "OpenClaw uses your calendars to show events and scheduling context when you enable calendar access.",
       "translated": "OpenClaw 會在你啟用行事曆存取權限時，使用你的行事曆來顯示事件與排程情境。"
@@ -14344,14 +14439,14 @@
       "translated": "OpenClaw 可能會使用動作資料，以支援裝置感知的互動與自動化。"
     },
     {
-      "id": "native.apple.c86f7ba5b3762eb7",
-      "source": "After you enable Health Summaries, OpenClaw reads steps, sleep, resting heart rate, and workouts to share requested aggregates with your configured AI provider.",
-      "translated": "啟用健康摘要後，OpenClaw 會讀取步數、睡眠、靜止心率和體能訓練，以便與您設定的 AI 供應商分享要求的彙整資料。"
+      "id": "native.apple.1d3a6099d7e11895",
+      "source": "OpenClaw reads your steps, sleep, resting heart rate, and workouts from the Apple Health app to create summaries you request and send them through your Gateway to your configured AI provider.",
+      "translated": "OpenClaw 會從 Apple 健康 App 讀取您的步數、睡眠、靜止心率和體能訓練資料，以建立您要求的摘要，並透過您的 Gateway 傳送至您設定的 AI 供應商。"
     },
     {
-      "id": "native.apple.89de9bad79f17038",
-      "source": "OpenClaw does not write or change Health data. Health Summaries read steps, sleep, resting heart rate, and workouts to share requested aggregates with your configured AI provider.",
-      "translated": "OpenClaw 不會寫入或變更健康資料。健康摘要會讀取步數、睡眠、靜止心率和運動記錄，以將所要求的彙總資料分享給您設定的 AI 供應商。"
+      "id": "native.apple.c90a204b3232c401",
+      "source": "OpenClaw does not write to the Apple Health app. It uses read-only data to create summaries you request and send them through your Gateway to your configured AI provider.",
+      "translated": "OpenClaw 不會將資料寫入 Apple 健康 App。它會使用唯讀資料建立您要求的摘要，並透過您的 Gateway 傳送至您設定的 AI 供應商。"
     },
     {
       "id": "native.apple.40ed4259ec869f1b",
@@ -15519,11 +15614,6 @@
       "translated": "僅新增"
     },
     {
-      "id": "native.apple.33df187e4402065a",
-      "source": "Health Summaries",
-      "translated": "健康摘要"
-    },
-    {
       "id": "native.apple.0b10201d7e452dc4",
       "source": "Allow",
       "translated": "允許"
@@ -15532,31 +15622,6 @@
       "id": "native.apple.3cb9ed2ae352f95c",
       "source": "Open Settings",
       "translated": "開啟設定"
-    },
-    {
-      "id": "native.apple.3f902cdb4d4e9176",
-      "source": "Health data is unavailable on this device.",
-      "translated": "此裝置無法使用健康資料。"
-    },
-    {
-      "id": "native.apple.33316ec020810816",
-      "source": "Shares only requested step, sleep, resting heart rate, and workout aggregates through your Gateway with your configured AI provider. Results may remain in chat history.",
-      "translated": "僅透過您的 Gateway 與已設定的 AI 供應商分享要求的步數、睡眠、靜止心率和體能訓練彙整資料。結果可能會保留在聊天記錄中。"
-    },
-    {
-      "id": "native.apple.53fb25cb6e6aae6e",
-      "source": "Off by default. Enabling lets requested aggregates leave this iPhone through your Gateway and configured AI provider.",
-      "translated": "預設關閉。啟用後，要求的彙整資料可透過您的 Gateway 和已設定的 AI 供應商離開此 iPhone。"
-    },
-    {
-      "id": "native.apple.6c2be9b001fb95b0",
-      "source": "Disable",
-      "translated": "停用"
-    },
-    {
-      "id": "native.apple.9eab20fbad55a0a9",
-      "source": "Enable & Share Summaries",
-      "translated": "啟用並分享摘要"
     },
     {
       "id": "native.apple.d9f9a74e25431256",
@@ -18769,6 +18834,16 @@
       "translated": "啟用狀態圖示的閒置眨眼與擺動效果。"
     },
     {
+      "id": "native.apple.093df96ad9d52a40",
+      "source": "Quick Chat",
+      "translated": "快速聊天"
+    },
+    {
+      "id": "native.apple.a66e340b4e1bd972",
+      "source": "Show a floating composer for quick messages, summoned with a global shortcut.",
+      "translated": "顯示浮動輸入框以快速傳送訊息，並可使用全域快捷鍵叫出。"
+    },
+    {
       "id": "native.apple.d908ab245711bbd2",
       "source": "Quick Chat shortcut",
       "translated": "快速聊天快捷鍵"
@@ -20079,6 +20154,11 @@
       "translated": "Gateway 無法規劃 \\(plan.summary.errors) 個\\(Self.memoryNoun(plan.summary.errors))。請再試一次。"
     },
     {
+      "id": "native.apple.ba758aa97c24ffe6",
+      "source": "Wake up, my friend!",
+      "translated": "醒醒，我的朋友！"
+    },
+    {
       "id": "native.apple.1400567a01a8d7c0",
       "source": "<redacted secret>",
       "translated": "<已遮蔽的密鑰>"
@@ -20112,6 +20192,16 @@
       "id": "native.apple.35a542956f4f5497",
       "source": "Reply to OpenClaw… (yes sets everything up)",
       "translated": "回覆 OpenClaw…（輸入 yes 即可完成所有設定）"
+    },
+    {
+      "id": "native.apple.134b9ae1d8a543df",
+      "source": "Skip for now",
+      "translated": "暫時略過"
+    },
+    {
+      "id": "native.apple.5435391fa338f227",
+      "source": "Recommended",
+      "translated": "建議"
     },
     {
       "id": "native.apple.78d1ad73762a7ce8",
@@ -21104,9 +21194,9 @@
       "translated": "傳訊息給 \\(self.model.agentDisplay.name)"
     },
     {
-      "id": "native.apple.c1fec5e4735d8995",
-      "source": "main session",
-      "translated": "主工作階段"
+      "id": "native.apple.edf12ff583307f43",
+      "source": "Send a window screenshot",
+      "translated": "傳送視窗截圖"
     },
     {
       "id": "native.apple.136cef9f750d3803",
@@ -22409,6 +22499,71 @@
       "translated": "偵測到語音喚醒！"
     },
     {
+      "id": "native.apple.282d11786f2f4c4b",
+      "source": "Talk mode off",
+      "translated": "對話模式已關閉"
+    },
+    {
+      "id": "native.apple.133d737c2b59e66d",
+      "source": "Talk mode paused",
+      "translated": "對話模式已暫停"
+    },
+    {
+      "id": "native.apple.c11a8fc78a7b2cf8",
+      "source": "Talk mode ready",
+      "translated": "對話模式已就緒"
+    },
+    {
+      "id": "native.apple.62a4d588f4259d54",
+      "source": "Listening",
+      "translated": "正在聆聽"
+    },
+    {
+      "id": "native.apple.d602e6304c3ef523",
+      "source": "Thinking",
+      "translated": "正在思考"
+    },
+    {
+      "id": "native.apple.2328556b7443e453",
+      "source": "Speaking",
+      "translated": "正在說話"
+    },
+    {
+      "id": "native.apple.b42b8777035baf64",
+      "source": "What would you like to work on?",
+      "translated": "你想要處理什麼？"
+    },
+    {
+      "id": "native.apple.448dfe21a7f3a883",
+      "source": "Check OpenClaw status",
+      "translated": "檢查 OpenClaw 狀態"
+    },
+    {
+      "id": "native.apple.00f4977e0123ce7a",
+      "source": "Summarize the current OpenClaw status and tell me what needs attention.",
+      "translated": "摘要說明 OpenClaw 目前的狀態，並告訴我有哪些事項需要注意。"
+    },
+    {
+      "id": "native.apple.9c1a9be47ac92727",
+      "source": "What can you do?",
+      "translated": "你能做什麼？"
+    },
+    {
+      "id": "native.apple.5101b6cab56c0faf",
+      "source": "Show me what you can help with on this Mac right now.",
+      "translated": "告訴我你目前能在這台 Mac 上協助哪些事情。"
+    },
+    {
+      "id": "native.apple.070fa91f6622e6cf",
+      "source": "Catch me up",
+      "translated": "讓我掌握近況"
+    },
+    {
+      "id": "native.apple.234ec45f4231edc4",
+      "source": "Summarize what happened in my sessions since yesterday.",
+      "translated": "摘要說明自昨天以來我的工作階段中發生了什麼事。"
+    },
+    {
       "id": "native.apple.c5d8bca2d78e1b9b",
       "source": " (local filtered)",
       "translated": "（本機已篩選）"
@@ -22464,9 +22619,49 @@
       "translated": "已使用 %@%% 的上下文"
     },
     {
+      "id": "native.apple.e57eb66d14768bdb",
+      "source": "%@ (override)",
+      "translated": "%@（覆寫）"
+    },
+    {
       "id": "native.apple.510c6dfa05924ae2",
       "source": "Thinking",
       "translated": "思考中"
+    },
+    {
+      "id": "native.apple.e47fcaaf47e5d6bc",
+      "source": "Full",
+      "translated": "完整"
+    },
+    {
+      "id": "native.apple.f434793807b778ce",
+      "source": "Verbosity",
+      "translated": "詳細程度"
+    },
+    {
+      "id": "native.apple.d3426c54f223c4d8",
+      "source": "Default (inherited)",
+      "translated": "預設（繼承）"
+    },
+    {
+      "id": "native.apple.575a78c2f3daf366",
+      "source": "On",
+      "translated": "開啟"
+    },
+    {
+      "id": "native.apple.75bebec90215a705",
+      "source": "Off",
+      "translated": "關閉"
+    },
+    {
+      "id": "native.apple.17481e3865493e34",
+      "source": "Fast",
+      "translated": "快速"
+    },
+    {
+      "id": "native.apple.e5f91b8690e705e2",
+      "source": "Fast responses",
+      "translated": "快速回應"
     },
     {
       "id": "native.apple.745b004e0b5b6b80",
@@ -22479,14 +22674,14 @@
       "translated": "最近"
     },
     {
-      "id": "native.apple.aa321cf4820426ef",
-      "source": "Models",
-      "translated": "模型"
-    },
-    {
       "id": "native.apple.0fce9d743a640218",
       "source": "Model",
       "translated": "模型"
+    },
+    {
+      "id": "native.apple.6045352c168e07cb",
+      "source": "Default",
+      "translated": "預設"
     },
     {
       "id": "native.apple.75550b03f06d6abc",
@@ -22654,6 +22849,41 @@
       "translated": "已使用 %@ 個權杖"
     },
     {
+      "id": "native.apple.ccfd6ae994d82449",
+      "source": "Loading full message…",
+      "translated": "正在載入完整訊息…"
+    },
+    {
+      "id": "native.apple.669ad52de4a26b87",
+      "source": "Full message unavailable",
+      "translated": "無法取得完整訊息"
+    },
+    {
+      "id": "native.apple.6f79794ee74caf99",
+      "source": "Full Message",
+      "translated": "完整訊息"
+    },
+    {
+      "id": "native.apple.d648251591db5dec",
+      "source": "Close",
+      "translated": "關閉"
+    },
+    {
+      "id": "native.apple.ba3963204bda5e84",
+      "source": "The full message is no longer available.",
+      "translated": "完整訊息已無法取得。"
+    },
+    {
+      "id": "native.apple.8bb98bd86ae85c1c",
+      "source": "The full message has no readable text.",
+      "translated": "完整訊息中沒有可讀取的文字。"
+    },
+    {
+      "id": "native.apple.2f43669d87c0e26d",
+      "source": "The full message could not be loaded.",
+      "translated": "無法載入完整訊息。"
+    },
+    {
       "id": "native.apple.2c865ac4a69645d3",
       "source": "Widget unavailable",
       "translated": "小工具無法使用"
@@ -22729,6 +22959,11 @@
       "translated": "正在執行工具…"
     },
     {
+      "id": "native.apple.51ef5e41f9124819",
+      "source": "Other",
+      "translated": "其他"
+    },
+    {
       "id": "native.apple.3b932a47b4223a43",
       "source": "Collapse plan",
       "translated": "收合計畫"
@@ -22737,6 +22972,476 @@
       "id": "native.apple.b6b3b9af4c618060",
       "source": "Expand plan",
       "translated": "展開計畫"
+    },
+    {
+      "id": "native.apple.da4494f9e875169d",
+      "source": "Other answer",
+      "translated": "其他答案"
+    },
+    {
+      "id": "native.apple.e9c3855562d8e4e9",
+      "source": "Not selected",
+      "translated": "未選取"
+    },
+    {
+      "id": "native.apple.bd4335213464d4be",
+      "source": "Selected",
+      "translated": "已選取"
+    },
+    {
+      "id": "native.apple.e3095b651fc46b52",
+      "source": "Submit",
+      "translated": "提交"
+    },
+    {
+      "id": "native.apple.6c1adc16e0a846e5",
+      "source": "Submitting…",
+      "translated": "正在提交…"
+    },
+    {
+      "id": "native.apple.698bdb0d6537edb6",
+      "source": "Expires in \\(seconds / 60)m \\(seconds % 60)s",
+      "translated": "將於 \\(seconds / 60)m \\(seconds % 60)s 後過期"
+    },
+    {
+      "id": "native.apple.30e1c342b3345290",
+      "source": "Expires in \\(seconds)s",
+      "translated": "將於 \\(seconds)s 後過期"
+    },
+    {
+      "id": "native.apple.7cd6fb01b9f5d14a",
+      "source": "User",
+      "translated": "使用者"
+    },
+    {
+      "id": "native.apple.b1cdcb906a43d5d6",
+      "source": "This session cannot be archived while it is active or running.",
+      "translated": "此工作階段在作用中或執行中時無法封存。"
+    },
+    {
+      "id": "native.apple.5817e3f3dab1ee19",
+      "source": "The main session cannot be deleted.",
+      "translated": "無法刪除主要工作階段。"
+    },
+    {
+      "id": "native.apple.a6b8df3f18171c91",
+      "source": "Remove attachments or wait for delivery before archiving or deleting this session.",
+      "translated": "請先移除附件或等待傳送完成，再封存或刪除此工作階段。"
+    },
+    {
+      "id": "native.apple.476b3862e0449857",
+      "source": "Running",
+      "translated": "執行中"
+    },
+    {
+      "id": "native.apple.83b41e41f428cffb",
+      "source": "Identity",
+      "translated": "身分"
+    },
+    {
+      "id": "native.apple.ba6710da42846eed",
+      "source": "Name",
+      "translated": "名稱"
+    },
+    {
+      "id": "native.apple.bdb1928f7e63c4c6",
+      "source": "Key",
+      "translated": "金鑰"
+    },
+    {
+      "id": "native.apple.7259d51423f8def0",
+      "source": "Copy session key",
+      "translated": "複製工作階段金鑰"
+    },
+    {
+      "id": "native.apple.1494b638984ddca3",
+      "source": "Kind",
+      "translated": "類型"
+    },
+    {
+      "id": "native.apple.49cd6c21bdd0d8da",
+      "source": "Organization",
+      "translated": "組織"
+    },
+    {
+      "id": "native.apple.83e2ae5c4c7dbb94",
+      "source": "Group",
+      "translated": "群組"
+    },
+    {
+      "id": "native.apple.1ba465bfa16ed23b",
+      "source": "None",
+      "translated": "無"
+    },
+    {
+      "id": "native.apple.2c7c9e5dc8ad574e",
+      "source": "Pinned",
+      "translated": "已釘選"
+    },
+    {
+      "id": "native.apple.b0d3e265af9f562a",
+      "source": "Archived",
+      "translated": "已封存"
+    },
+    {
+      "id": "native.apple.de94ca2cf7d4d766",
+      "source": "Run",
+      "translated": "執行"
+    },
+    {
+      "id": "native.apple.f7a51dca3268b26c",
+      "source": "Status",
+      "translated": "狀態"
+    },
+    {
+      "id": "native.apple.12678de5fa43321d",
+      "source": "Model",
+      "translated": "模型"
+    },
+    {
+      "id": "native.apple.8ec6bd6001df285d",
+      "source": "Provider",
+      "translated": "提供者"
+    },
+    {
+      "id": "native.apple.f43534cf1ee73605",
+      "source": "Runtime",
+      "translated": "執行階段"
+    },
+    {
+      "id": "native.apple.f0775e602bbe75ed",
+      "source": "Run duration",
+      "translated": "執行時間"
+    },
+    {
+      "id": "native.apple.ecde91d89eab026b",
+      "source": "Worktree",
+      "translated": "工作樹"
+    },
+    {
+      "id": "native.apple.1ef1698bb3ff7166",
+      "source": "ID",
+      "translated": "ID"
+    },
+    {
+      "id": "native.apple.69bc49f9663fa205",
+      "source": "Branch",
+      "translated": "分支"
+    },
+    {
+      "id": "native.apple.aa430e81e52e2354",
+      "source": "Repository root",
+      "translated": "儲存庫根目錄"
+    },
+    {
+      "id": "native.apple.6e851b012a982d38",
+      "source": "Activity",
+      "translated": "活動"
+    },
+    {
+      "id": "native.apple.bf87c6fd92c9315a",
+      "source": "Updated",
+      "translated": "已更新"
+    },
+    {
+      "id": "native.apple.dcb1734cba578b79",
+      "source": "Last activity",
+      "translated": "最近活動"
+    },
+    {
+      "id": "native.apple.58ca290e3f032865",
+      "source": "Last interaction",
+      "translated": "最近互動"
+    },
+    {
+      "id": "native.apple.7020bd521499f3b8",
+      "source": "Run started",
+      "translated": "執行開始時間"
+    },
+    {
+      "id": "native.apple.abb2b24d6378b605",
+      "source": "Run ended",
+      "translated": "執行結束時間"
+    },
+    {
+      "id": "native.apple.cd7c3095a22f80a9",
+      "source": "Session Info",
+      "translated": "工作階段資訊"
+    },
+    {
+      "id": "native.apple.e308b012d84b3b3e",
+      "source": "Groups",
+      "translated": "群組"
+    },
+    {
+      "id": "native.apple.6438f66cfcaefaf7",
+      "source": "Rename…",
+      "translated": "重新命名…"
+    },
+    {
+      "id": "native.apple.58b0f1df4985b0d1",
+      "source": "Delete…",
+      "translated": "刪除…"
+    },
+    {
+      "id": "native.apple.bc70cc0f0b882179",
+      "source": "No groups",
+      "translated": "沒有群組"
+    },
+    {
+      "id": "native.apple.cb3e1fa7783a35d2",
+      "source": "Create Group",
+      "translated": "建立群組"
+    },
+    {
+      "id": "native.apple.4ac72aeb70f107d8",
+      "source": "Add Group",
+      "translated": "加入群組"
+    },
+    {
+      "id": "native.apple.23d628606fe0734f",
+      "source": "Session Groups",
+      "translated": "工作階段群組"
+    },
+    {
+      "id": "native.apple.7777b2d2ec43ed59",
+      "source": "Done",
+      "translated": "完成"
+    },
+    {
+      "id": "native.apple.0b0149661cacfe36",
+      "source": "Rename Group",
+      "translated": "重新命名群組"
+    },
+    {
+      "id": "native.apple.8cbd863aa4d0524f",
+      "source": "Group name",
+      "translated": "群組名稱"
+    },
+    {
+      "id": "native.apple.6021088d5ed9c301",
+      "source": "Rename",
+      "translated": "重新命名"
+    },
+    {
+      "id": "native.apple.e697417338a47751",
+      "source": "Cancel",
+      "translated": "取消"
+    },
+    {
+      "id": "native.apple.cc89328a14af7a23",
+      "source": "Delete “%@”?",
+      "translated": "刪除「%@」？"
+    },
+    {
+      "id": "native.apple.4c09741db2e6c624",
+      "source": "Delete group?",
+      "translated": "刪除群組？"
+    },
+    {
+      "id": "native.apple.ddb1bbbd3c1a9c5e",
+      "source": "Delete Group",
+      "translated": "刪除群組"
+    },
+    {
+      "id": "native.apple.b049c8a4d2805e08",
+      "source": "Sessions in this group become ungrouped.",
+      "translated": "此群組中的工作階段將變為未分組。"
+    },
+    {
+      "id": "native.apple.5aa6082d78027c5f",
+      "source": "Gateway changed. Close and reopen Groups to continue.",
+      "translated": "Gateway 已變更。請關閉並重新開啟「群組」以繼續。"
+    },
+    {
+      "id": "native.apple.bb4b44183929c881",
+      "source": "No agents are available on this gateway.",
+      "translated": "此 Gateway 上沒有可用的代理程式。"
+    },
+    {
+      "id": "native.apple.6c89f35d53506406",
+      "source": "New Session Options",
+      "translated": "新工作階段選項"
+    },
+    {
+      "id": "native.apple.5b0cde807ccb4241",
+      "source": "Agent",
+      "translated": "代理程式"
+    },
+    {
+      "id": "native.apple.124a640f9620d9cd",
+      "source": "Create in a worktree",
+      "translated": "在工作樹中建立"
+    },
+    {
+      "id": "native.apple.632ce245d5575fea",
+      "source": "Base ref (optional)",
+      "translated": "基礎參照（選填）"
+    },
+    {
+      "id": "native.apple.fd81909fc9719a59",
+      "source": "Retry",
+      "translated": "重試"
+    },
+    {
+      "id": "native.apple.a085278be62286b2",
+      "source": "Create",
+      "translated": "建立"
+    },
+    {
+      "id": "native.apple.795ba37f6782cf28",
+      "source": "The session could not be created.",
+      "translated": "無法建立工作階段。"
+    },
+    {
+      "id": "native.apple.8ec708a3605a2cc3",
+      "source": "Search sessions",
+      "translated": "搜尋工作階段"
+    },
+    {
+      "id": "native.apple.23b069b4e7f97039",
+      "source": "No Sessions",
+      "translated": "沒有工作階段"
+    },
+    {
+      "id": "native.apple.2d4ee298bdd1c05d",
+      "source": "No Results",
+      "translated": "沒有結果"
+    },
+    {
+      "id": "native.apple.0058923f2ce8a3ec",
+      "source": "New Session",
+      "translated": "新增工作階段"
+    },
+    {
+      "id": "native.apple.66ba42960eb4135b",
+      "source": "New session",
+      "translated": "新增工作階段"
+    },
+    {
+      "id": "native.apple.2ef0e34db02ad255",
+      "source": "New session options",
+      "translated": "新工作階段選項"
+    },
+    {
+      "id": "native.apple.36753ef2f1ed4264",
+      "source": "Rename Session",
+      "translated": "重新命名工作階段"
+    },
+    {
+      "id": "native.apple.c9de0a1510ef475f",
+      "source": "Session name",
+      "translated": "工作階段名稱"
+    },
+    {
+      "id": "native.apple.6ec5a13c0e6c20d9",
+      "source": "Rename",
+      "translated": "重新命名"
+    },
+    {
+      "id": "native.apple.4c76665d89af4bec",
+      "source": "Cancel",
+      "translated": "取消"
+    },
+    {
+      "id": "native.apple.afb4e6c99c63a28d",
+      "source": "Delete Session",
+      "translated": "刪除工作階段"
+    },
+    {
+      "id": "native.apple.3d4ef32e42f136a4",
+      "source": "The session and its transcript are removed from the gateway.",
+      "translated": "工作階段及其逐字記錄將從 Gateway 中移除。"
+    },
+    {
+      "id": "native.apple.90bcad5f067b4be1",
+      "source": "Delete “%@”?",
+      "translated": "刪除「%@」？"
+    },
+    {
+      "id": "native.apple.9a7dca238fba628d",
+      "source": "Session running",
+      "translated": "工作階段執行中"
+    },
+    {
+      "id": "native.apple.fcfbfe5e97a95e9c",
+      "source": "Session failed",
+      "translated": "工作階段失敗"
+    },
+    {
+      "id": "native.apple.ac85292b16a7465f",
+      "source": "Unread",
+      "translated": "未讀"
+    },
+    {
+      "id": "native.apple.f57a4b9c14d31867",
+      "source": "Get Info…",
+      "translated": "取得資訊…"
+    },
+    {
+      "id": "native.apple.a174cb1027a9b881",
+      "source": "Rename…",
+      "translated": "重新命名…"
+    },
+    {
+      "id": "native.apple.134d6bf84d58fb38",
+      "source": "Pin",
+      "translated": "釘選"
+    },
+    {
+      "id": "native.apple.e7815cc4ba359513",
+      "source": "Unpin",
+      "translated": "取消釘選"
+    },
+    {
+      "id": "native.apple.83f9f2db7eef6a19",
+      "source": "Fork",
+      "translated": "分支"
+    },
+    {
+      "id": "native.apple.235614194dc19df2",
+      "source": "Mark Read",
+      "translated": "標示為已讀"
+    },
+    {
+      "id": "native.apple.bc71f0d20b7f72a0",
+      "source": "Mark Unread",
+      "translated": "標示為未讀"
+    },
+    {
+      "id": "native.apple.c9e118f6aae18d97",
+      "source": "Archive",
+      "translated": "封存"
+    },
+    {
+      "id": "native.apple.10365a351a1b58b3",
+      "source": "Restore",
+      "translated": "復原"
+    },
+    {
+      "id": "native.apple.660f63319b89bd8e",
+      "source": "Copy Session Key",
+      "translated": "複製工作階段金鑰"
+    },
+    {
+      "id": "native.apple.4aeb7c14c26dabac",
+      "source": "Delete Session…",
+      "translated": "刪除工作階段…"
+    },
+    {
+      "id": "native.apple.6a3425ea2811ff88",
+      "source": "Gateway connected",
+      "translated": "Gateway 已連線"
+    },
+    {
+      "id": "native.apple.e3958d1053259f1d",
+      "source": "Connecting…",
+      "translated": "連線中…"
+    },
+    {
+      "id": "native.apple.79f708b3bc1d3a6c",
+      "source": "Retry session groups",
+      "translated": "重試工作階段群組"
     },
     {
       "id": "native.apple.63320b6d5138c0db",
@@ -22784,6 +23489,41 @@
       "translated": "取消"
     },
     {
+      "id": "native.apple.751e0f6b81cd374a",
+      "source": "Delete selected sessions?",
+      "translated": "刪除所選的工作階段？"
+    },
+    {
+      "id": "native.apple.aa679276581b0058",
+      "source": "Delete Sessions",
+      "translated": "刪除工作階段"
+    },
+    {
+      "id": "native.apple.f837129cbee23297",
+      "source": "Each selected session and its transcript will be removed from the gateway.",
+      "translated": "每個所選的工作階段及其逐字稿都將從 Gateway 中移除。"
+    },
+    {
+      "id": "native.apple.bf09df5e38a7a950",
+      "source": "Groups",
+      "translated": "群組"
+    },
+    {
+      "id": "native.apple.64013cfee5e25305",
+      "source": "Manage session groups",
+      "translated": "管理工作階段群組"
+    },
+    {
+      "id": "native.apple.185f4688f98e244e",
+      "source": "Done",
+      "translated": "完成"
+    },
+    {
+      "id": "native.apple.58133fc5791847e6",
+      "source": "Select",
+      "translated": "選取"
+    },
+    {
       "id": "native.apple.b67eaecec1b423ac",
       "source": "No archived sessions",
       "translated": "沒有已封存的工作階段"
@@ -22794,14 +23534,39 @@
       "translated": "找不到工作階段"
     },
     {
-      "id": "native.apple.05cb1fecc5844b69",
-      "source": "Pinned",
-      "translated": "已釘選"
+      "id": "native.apple.f0e9d8f69c1d9190",
+      "source": "Restore",
+      "translated": "復原"
+    },
+    {
+      "id": "native.apple.158cfa096c57bcb9",
+      "source": "Get Info…",
+      "translated": "取得資訊…"
     },
     {
       "id": "native.apple.080fce25e4a9bb61",
       "source": "Rename",
       "translated": "重新命名"
+    },
+    {
+      "id": "native.apple.6de479e9d780869a",
+      "source": "Fork",
+      "translated": "分支"
+    },
+    {
+      "id": "native.apple.1398a2f69867f22d",
+      "source": "Mark Read",
+      "translated": "標示為已讀"
+    },
+    {
+      "id": "native.apple.4f259c4409cfcc75",
+      "source": "Mark Unread",
+      "translated": "標示為未讀"
+    },
+    {
+      "id": "native.apple.05cb1fecc5844b69",
+      "source": "Pinned",
+      "translated": "已釘選"
     },
     {
       "id": "native.apple.d148288258094aa6",
@@ -22819,9 +23584,24 @@
       "translated": "封存"
     },
     {
-      "id": "native.apple.34b910911a05110e",
-      "source": "Unarchive",
-      "translated": "取消封存"
+      "id": "native.apple.b09b91392835fe58",
+      "source": "Delete",
+      "translated": "刪除"
+    },
+    {
+      "id": "native.apple.946b677d8dbf0f37",
+      "source": "Hide talk transcript",
+      "translated": "隱藏對話逐字稿"
+    },
+    {
+      "id": "native.apple.cb1d1c999a859927",
+      "source": "Show talk transcript",
+      "translated": "顯示對話逐字稿"
+    },
+    {
+      "id": "native.apple.e7beeef6043ffd2a",
+      "source": "System Default",
+      "translated": "系統預設"
     },
     {
       "id": "native.apple.c4e808a2ec8d49f5",
@@ -22869,16 +23649,6 @@
       "translated": "聆聽"
     },
     {
-      "id": "native.apple.fe9f30f12f1dcfaf",
-      "source": "Copy Message",
-      "translated": "複製訊息"
-    },
-    {
-      "id": "native.apple.f84b674ad395b694",
-      "source": "Jump to latest",
-      "translated": "跳至最新內容"
-    },
-    {
       "id": "native.apple.429d825201b2cb85",
       "source": "Jump to latest reply",
       "translated": "跳至最新回覆"
@@ -22887,6 +23657,31 @@
       "id": "native.apple.9ab586b85834705c",
       "source": "Refresh",
       "translated": "重新整理"
+    },
+    {
+      "id": "native.apple.fe9f30f12f1dcfaf",
+      "source": "Copy Message",
+      "translated": "複製訊息"
+    },
+    {
+      "id": "native.apple.90bc8a8045e7017e",
+      "source": "Open Full Message",
+      "translated": "開啟完整訊息"
+    },
+    {
+      "id": "native.apple.b37ec7bd7dc1579a",
+      "source": "Reply",
+      "translated": "回覆"
+    },
+    {
+      "id": "native.apple.8d80a6bb3d6e99b0",
+      "source": "You",
+      "translated": "你"
+    },
+    {
+      "id": "native.apple.3b44a67aa284886f",
+      "source": "Assistant",
+      "translated": "助理"
     },
     {
       "id": "native.apple.28c2691c03030434",
@@ -22949,14 +23744,24 @@
       "translated": "路由變更後已排入佇列"
     },
     {
-      "id": "native.apple.710c7bd117a7cc12",
-      "source": "Remove attachments or wait for delivery to resolve before switching chats.",
-      "translated": "請先移除附件或等待傳送完成，再切換聊天。"
+      "id": "native.apple.787047d0da6b8b9f",
+      "source": "Remove attachments or wait for delivery to resolve before starting a new chat.",
+      "translated": "請移除附件，或等待傳送問題解決後再開始新的聊天。"
+    },
+    {
+      "id": "native.apple.980f552bb0f96c0f",
+      "source": "Gateway changed before the session operation started.",
+      "translated": "Gateway 在工作階段操作開始前已變更。"
     },
     {
       "id": "native.apple.d93e6fe16ec1b0e5",
       "source": "Remove attachments or wait for delivery to resolve before starting a new chat.",
       "translated": "請先移除附件或等待傳送完成，再開始新的聊天。"
+    },
+    {
+      "id": "native.apple.710c7bd117a7cc12",
+      "source": "Remove attachments or wait for delivery to resolve before switching chats.",
+      "translated": "請先移除附件或等待傳送完成，再切換聊天。"
     },
     {
       "id": "native.apple.87ba543b42696b92",
@@ -22974,9 +23779,39 @@
       "translated": "這會重設與 %@ 的對話。工作階段金鑰將維持不變。"
     },
     {
+      "id": "native.apple.a92e96bed98bd553",
+      "source": "Rename Session",
+      "translated": "重新命名工作階段"
+    },
+    {
+      "id": "native.apple.848e2388f3466f40",
+      "source": "Session name",
+      "translated": "工作階段名稱"
+    },
+    {
+      "id": "native.apple.8d636ca6b4764418",
+      "source": "Rename",
+      "translated": "重新命名"
+    },
+    {
+      "id": "native.apple.32b4a79f1b889aa6",
+      "source": "Cancel",
+      "translated": "取消"
+    },
+    {
       "id": "native.apple.2ee7858b00a47c42",
       "source": "Export Transcript",
       "translated": "匯出對話紀錄"
+    },
+    {
+      "id": "native.apple.4af0f566d39d7041",
+      "source": "Sessions",
+      "translated": "工作階段"
+    },
+    {
+      "id": "native.apple.c13dbe6b5c01e9bd",
+      "source": "%@ (override)",
+      "translated": "%@（覆寫）"
     },
     {
       "id": "native.apple.b1f10b5e9113881d",
@@ -22989,6 +23824,41 @@
       "translated": "思考層級"
     },
     {
+      "id": "native.apple.ca556b80c9adcae8",
+      "source": "Full",
+      "translated": "完整"
+    },
+    {
+      "id": "native.apple.1ae2d7073bba214b",
+      "source": "Verbosity",
+      "translated": "詳細程度"
+    },
+    {
+      "id": "native.apple.b56645c4fa60fe23",
+      "source": "Default (inherited)",
+      "translated": "預設（繼承）"
+    },
+    {
+      "id": "native.apple.17277ea10fd23846",
+      "source": "On",
+      "translated": "開啟"
+    },
+    {
+      "id": "native.apple.8f2830ece961d651",
+      "source": "Off",
+      "translated": "關閉"
+    },
+    {
+      "id": "native.apple.0acac602f7cc68fc",
+      "source": "Fast",
+      "translated": "快速"
+    },
+    {
+      "id": "native.apple.16e00cf511074484",
+      "source": "Fast responses",
+      "translated": "快速回應"
+    },
+    {
       "id": "native.apple.17ea1ddec4a7b7a8",
       "source": "Pinned",
       "translated": "已釘選"
@@ -22999,14 +23869,24 @@
       "translated": "最近"
     },
     {
-      "id": "native.apple.f41f892742244520",
-      "source": "Models",
-      "translated": "模型"
-    },
-    {
       "id": "native.apple.273aa7b9194a8d0d",
       "source": "Model",
       "translated": "模型"
+    },
+    {
+      "id": "native.apple.68c4c3dd439d182b",
+      "source": "Default",
+      "translated": "預設"
+    },
+    {
+      "id": "native.apple.eb58552e43c8dde2",
+      "source": "New Session",
+      "translated": "新增工作階段"
+    },
+    {
+      "id": "native.apple.a7119fbf9d25df5e",
+      "source": "New Session Options…",
+      "translated": "新增工作階段選項…"
     },
     {
       "id": "native.apple.5361129a24118af6",
@@ -23014,9 +23894,69 @@
       "translated": "重新整理"
     },
     {
+      "id": "native.apple.2bcff4a8fa503739",
+      "source": "Sessions…",
+      "translated": "工作階段…"
+    },
+    {
+      "id": "native.apple.c36e008b051adb38",
+      "source": "Rename Session…",
+      "translated": "重新命名工作階段…"
+    },
+    {
+      "id": "native.apple.ea0ef95a159bffe0",
+      "source": "Fork Session",
+      "translated": "分支工作階段"
+    },
+    {
+      "id": "native.apple.8768f9ed198edc54",
+      "source": "Unpin",
+      "translated": "取消釘選"
+    },
+    {
+      "id": "native.apple.a8a2f4b248663f97",
+      "source": "Pin",
+      "translated": "釘選"
+    },
+    {
+      "id": "native.apple.e53f1d7e094dc542",
+      "source": "Mark Read",
+      "translated": "標示為已讀"
+    },
+    {
+      "id": "native.apple.99579b05ec001672",
+      "source": "Mark Unread",
+      "translated": "標示為未讀"
+    },
+    {
+      "id": "native.apple.b39c58e213137cc8",
+      "source": "Restore",
+      "translated": "復原"
+    },
+    {
+      "id": "native.apple.6f5686f621b44307",
+      "source": "Archive",
+      "translated": "封存"
+    },
+    {
+      "id": "native.apple.27ddbe5e4643b60f",
+      "source": "Copy Session Key",
+      "translated": "複製工作階段金鑰"
+    },
+    {
       "id": "native.apple.9b2ad72143b931bf",
       "source": "Export Transcript…",
       "translated": "匯出對話紀錄…"
+    },
+    {
+      "id": "native.apple.ebb130189022c7ec",
+      "source": "Show Reasoning",
+      "translated": "顯示推理過程"
+    },
+    {
+      "id": "native.apple.d0dba9aad550fa6e",
+      "source": "Show Tool Activity",
+      "translated": "顯示工具活動"
     },
     {
       "id": "native.apple.4b24d792545e5086",
@@ -23042,76 +23982,6 @@
       "id": "native.apple.f0a4720df5f5f403",
       "source": "Compact Session",
       "translated": "精簡工作階段"
-    },
-    {
-      "id": "native.apple.0b9fc81ff2031799",
-      "source": "Search sessions",
-      "translated": "搜尋工作階段"
-    },
-    {
-      "id": "native.apple.f10d5ccfd0530fec",
-      "source": "No Results",
-      "translated": "沒有結果"
-    },
-    {
-      "id": "native.apple.42b0ee4c8b3326b6",
-      "source": "No Sessions",
-      "translated": "沒有工作階段"
-    },
-    {
-      "id": "native.apple.eb58552e43c8dde2",
-      "source": "New Session",
-      "translated": "新增工作階段"
-    },
-    {
-      "id": "native.apple.247771e4350c006f",
-      "source": "New session",
-      "translated": "新工作階段"
-    },
-    {
-      "id": "native.apple.d9a72d07e8d95d35",
-      "source": "Delete Session",
-      "translated": "刪除工作階段"
-    },
-    {
-      "id": "native.apple.499537ec30a28ae0",
-      "source": "The session and its transcript are removed from the gateway.",
-      "translated": "工作階段及其記錄將從 gateway 移除。"
-    },
-    {
-      "id": "native.apple.1bd1b747fd161df5",
-      "source": "Unread",
-      "translated": "未讀"
-    },
-    {
-      "id": "native.apple.a8a2f4b248663f97",
-      "source": "Pin",
-      "translated": "釘選"
-    },
-    {
-      "id": "native.apple.8768f9ed198edc54",
-      "source": "Unpin",
-      "translated": "取消釘選"
-    },
-    {
-      "id": "native.apple.27ddbe5e4643b60f",
-      "source": "Copy Session Key",
-      "translated": "複製工作階段金鑰"
-    },
-    {
-      "id": "native.apple.a994d072ab35cb35",
-      "source": "Delete Session…",
-      "translated": "刪除工作階段…"
-    },
-    {
-      "id": "native.apple.22d5ce71e22a7f73",
-      "source": "Connecting…",
-      "translated": "連線中…"
-    },
-    {
-      "id": "native.apple.8d0606ab1a2c0f44",
-      "source": "Gateway connected",
-      "translated": "Gateway 已連線"
     },
     {
       "id": "native.apple.f74d150ce05205dd",

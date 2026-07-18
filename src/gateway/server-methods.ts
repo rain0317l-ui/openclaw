@@ -647,6 +647,8 @@ export const coreGatewayHandlers: GatewayRequestHandlers = {
       "sessions.create",
       "sessions.compaction.branch",
       "sessions.compaction.restore",
+      "sessions.rewind",
+      "sessions.fork",
       "sessions.send",
       "sessions.steer",
       "sessions.abort",
@@ -727,7 +729,12 @@ export const coreGatewayHandlers: GatewayRequestHandlers = {
     loadHandlers: loadSendHandlers,
   }),
   ...createLazyCoreHandlers({
-    methods: ["conversations.send", "conversations.turn", "conversations.turn.cancel"],
+    methods: [
+      "conversations.list",
+      "conversations.send",
+      "conversations.turn",
+      "conversations.turn.cancel",
+    ],
     loadHandlers: loadConversationHandlers,
   }),
   ...createLazyCoreHandlers({
