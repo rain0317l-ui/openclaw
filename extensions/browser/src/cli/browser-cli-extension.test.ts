@@ -4,7 +4,7 @@ import { createCliRuntimeCapture } from "../../test-support.js";
 import { resolveLocalPairingGatewayUrl } from "./browser-cli-extension-pairing.js";
 import * as cliCoreApiModule from "./core-api.js";
 
-const relayMocks = vi.hoisted(() => ({ ensureExtensionRelayToken: vi.fn(() => "pair-token") }));
+const relayMocks = vi.hoisted(() => ({ ensureExtensionRelayToken: vi.fn(() => "a".repeat(64)) }));
 
 vi.mock("../browser/extension-relay/relay-auth.js", async (importOriginal) => ({
   ...(await importOriginal<typeof import("../browser/extension-relay/relay-auth.js")>()),
@@ -52,7 +52,7 @@ describe("browser extension pairing Gateway URL", () => {
     await program.parseAsync(["browser", "extension", "pair", "--json"], { from: "user" });
 
     expect(writeJsonSpy).toHaveBeenCalledWith({
-      pairingString: expect.stringContaining("#pair-token"),
+      pairingString: expect.stringContaining(`#${"a".repeat(64)}`),
       relayPort: 18799,
       remote: false,
     });
@@ -82,5 +82,26 @@ describe("browser extension pairing Gateway URL", () => {
       relayPort: 18798,
       remote: false,
     });
+  });
+
+  it("prints the relay CDP endpoint for external clients via cdp --json", async () => {
+    vi.spyOn(cliCoreApiModule, "getRuntimeConfig").mockReturnValue({});
+    const logSpy = vi.spyOn(cliCoreApiModule.defaultRuntime, "log").mockImplementation(runtime.log);
+    const writeJsonSpy = vi
+      .spyOn(cliCoreApiModule.defaultRuntime, "writeJson")
+      .mockImplementation(runtime.writeJson);
+    const { registerBrowserExtensionCommands } = await import("./browser-cli-extension.js");
+    const program = new Command();
+    const browser = program.command("browser");
+    registerBrowserExtensionCommands(browser, () => ({}));
+
+    await program.parseAsync(["browser", "extension", "cdp", "--json"], { from: "user" });
+
+    expect(writeJsonSpy).toHaveBeenCalledWith({
+      browserUrl: "http://127.0.0.1:18799",
+      wsEndpoint: "ws://127.0.0.1:18799/cdp",
+      headers: { Authorization: `Bearer ${"a".repeat(64)}` },
+    });
+    expect(logSpy).not.toHaveBeenCalled();
   });
 });
